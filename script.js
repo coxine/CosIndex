@@ -13,3 +13,5 @@ const redirect = () => {
         console.log("No redirection needed.");
     }
 };
+
+redirect();
