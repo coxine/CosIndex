@@ -45,16 +45,16 @@ export default function Home() {
         </a>
 
         <a
-          href="https://clock.cos.tg"
+          href="https://e.cos.tg"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
-            考场时钟 <span>-&gt;</span>
+            电子神庙 <span>-&gt;</span>
           </h2>
           <p>
-            考试的时候不用担心不知道时间啦~
+            在线拜考神～（建设中）
             <br />
           </p>
         </a>
@@ -69,53 +69,6 @@ export default function Home() {
           </h2>
           <p>自动获取中国大学MOOC网的答案~</p>
         </a>
-
-        <a
-          href="https://chat.cos.tg"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            神曰 <span>-&gt;</span>
-          </h2>
-          <p>和考神聊聊天！</p>
-        </a>
-        <a
-          href="https://img.cos.tg"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            图神庙 <span>-&gt;</span>
-          </h2>
-          <p>AI图片生成~</p>
-        </a>
-        <a
-          href="https://tts.cos.tg"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            神吟阁 <span>-&gt;</span>
-          </h2>
-          <p>支持多语言的文字转语音~</p>
-        </a>
-
-        <a
-          href="https://surf.cos.tg "
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            仙河漂流 <span>-&gt;</span>
-          </h2>
-          <p>Edge同款冲浪小游戏</p>
-        </a>
-
       </div>
     </main >
   );
