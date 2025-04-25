@@ -1,26 +1,13 @@
-import { useEffect } from 'react'
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
-
-function RedirectToExternal() {
-  const location = useLocation()
-  const path = location.pathname
-
-  useEffect(() => {
-    window.location.href = `https://go.cos.tg${path}`
-  }, [path])
-  return <p>Redirecting...</p>
-}
-
-function HomePage() {
-  return <h1>111</h1>
-}
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Redirect from './pages/Redirect'
+import HomePage from './pages/HomePage'
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="*" element={<RedirectToExternal />} />
+        <Route path="*" element={<Redirect />} />
       </Routes>
     </BrowserRouter>
   )
