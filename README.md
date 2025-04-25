@@ -1,43 +1,67 @@
-# 瑞治网
+# 瑞治导航站
 
-## 部署指南
+一个轻量、美观、功能强大的书签导航站，支持多种自定义，适合个人或团队使用。
+
+## ✨ 项目亮点
+
+- ✅ 高度可定制：支持图标、标题、介绍、主题、链接等全面配置
+- 🌗 深色 / 浅色模式切换：自动适配系统主题，提升阅读体验
+- 🔍 搜索功能：快速查找书签，不再翻找一堆链接
+- ☁️ 无服务器，部署方便：基于静态页面，配合 Cloudflare Pages 一键上线
+
+## 🚀 快速部署指南
 
 1. Fork 本仓库
-2. 根据下方的自定义指南调整配置
-3. 在 Cloudflare Pages 中基于本仓库创建一个新的 Pages 项目并部署，即可访问。
+2. 根据下方的「自定义指南」进行个性化配置
+3. 前往 [Cloudflare Pages](https://pages.cloudflare.com/)
+   - 创建新项目，选择本仓库
+   - 使用默认设置即可自动构建和部署
+4. 部署完成后即可访问你专属的导航站！
 
-## 自定义指南
+## ⚙️ 自定义指南
 
-### 自定义站点信息
+### 🎨 自定义网站图标
 
-- 站点信息配置在 `src/config/site.ts` 中
+修改 `public/favicon.svg` 文件，即可替换站点图标。
+
+### 🏠 自定义站点信息
+
+编辑 `src/config/site.ts` 文件：
+
 - `siteTitle`：站点标题
 - `footerText`：页脚文字
 
-### 自定义网站介绍
+#### 🔁 启用短链接跳转（可选）
 
-- 网站介绍配置在 `src/config/introduction.ts` 中
-- `introduction`：网站介绍，支持大部分 Markdown 语法
+如果你部署了短链接服务（如：`https://short.example.com`），可开启短链功能。  
+在访问 `/xx` 时会自动跳转至 `https://short.example.com/xx`。  
+若不启用，请将 `site.ts` 中的 `isShortLinkEnabled` 设置为 `false`。
 
-### 自定义主题
+- `isShortLinkEnabled`：是否启用短链接功能
+- `shortLinkBaseUrl`：短链接服务地址（如：`https://short.example.com`）
 
-- 主题配置在 `src/config/theme.ts` 中
-- 可更改浅色模式和深色模式下的`primary`和`secondary`颜色
-- 为了致敬经典，使用**苍耳与墨**字体，如需更改字体，请在 `src/config/theme.ts` 中修改 `fontFamily` 的值
+### 📖 自定义网站介绍
 
-### 启用短链接功能
+编辑 `src/config/introduction.ts` 文件：
 
-- 本站默认启用短链接功能，假设有一个正在运行的短链接服务，地址为 `${shortLinkBaseUrl}`，那么在访问本站的`/xx`时，会自动跳转到 `${shortLinkBaseUrl}/xx`
-- 如果不需要短链接功能，请在 `src/config/site.ts` 中将 `isShortLinkEnabled` 设置为 `false`
+- `introduction` 字段支持 Markdown，可用于个人介绍、站点说明等。
 
-### 自定义链接
+### 🎨 自定义主题风格
 
-- 链接配置在 `src/config/nav.ts` 中
-- 链接组可配置`title`、`desc` 和 `items`
-  - `title`：链接组标题
-  - `desc`：链接组描述
+编辑 `src/config/theme.ts` 文件：
+
+- 可自定义浅色模式和深色模式下的 `primary` 与 `secondary` 主题色
+- 默认使用经典的**苍耳与墨**字体，如需替换请修改 `fontFamily` 字段
+
+### 🔗 自定义导航链接
+
+编辑 `src/config/nav.ts` 文件：
+
+- 每个链接组支持：
+  - `title`：标题
+  - `desc`：描述
   - `items`：链接项列表
-- 链接项可配置`name`、`desc` 和 `link`
+- 每个链接项支持：
   - `name`：链接名称
-  - `desc`：链接描述
-  - `link`：链接地址
+  - `desc`：链接说明
+  - `link`：跳转地址
