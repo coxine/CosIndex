@@ -29,7 +29,8 @@ function HomePage() {
         maxWidth="lg"
         sx={{
           flexGrow: 1,
-          mt: 2,
+          mt: 4,
+          mb: 2,
         }}
         disableGutters
       >

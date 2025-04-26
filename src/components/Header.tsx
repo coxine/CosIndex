@@ -1,10 +1,18 @@
 import { alpha } from '@mui/material/styles'
-import { AppBar, Box, InputBase, Toolbar, Typography } from '@mui/material'
-import { Search } from '@mui/icons-material'
+import {
+  AppBar,
+  Box,
+  IconButton,
+  InputBase,
+  Toolbar,
+  Typography,
+} from '@mui/material'
+import { GitHub, Search } from '@mui/icons-material'
 import { useState } from 'react'
 
 import ColorSchemeToggle from './ColorSchemeToggle'
 import { siteTitle } from '../config/site'
+import { Link } from 'react-router-dom'
 
 export default function Header({
   onSearch,
@@ -22,13 +30,14 @@ export default function Header({
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
-        position="static"
+        position="fixed"
         sx={{
           bgcolor: 'primary.main',
           backdropFilter: 'blur(10px)',
-          background: (theme) => alpha(theme.palette.primary.main, 0.8),
+          background: (theme) => alpha(theme.palette.primary.main, 0.75),
           boxShadow: (theme) =>
             `0 4px 20px 0 ${alpha(theme.palette.common.black, 0.1)}`,
+          zIndex: (theme) => theme.zIndex.drawer + 1,
         }}
       >
         <Toolbar>
@@ -89,8 +98,14 @@ export default function Header({
             />
           </Box>
           <ColorSchemeToggle />
+          <Link to="https://github.com/coxine/CosIndex">
+            <IconButton>
+              <GitHub />
+            </IconButton>
+          </Link>
         </Toolbar>
       </AppBar>
+      <Toolbar /> {/* This empty Toolbar creates space equal to the AppBar height */}
     </Box>
   )
 }

@@ -4,6 +4,7 @@ export const customTheme = {
       palette: {
         primary: {
           main: '#AEDD81',
+          contrastText: '#114514',
         },
         secondary: {
           main: '#F6E1A8',
@@ -14,6 +15,7 @@ export const customTheme = {
       palette: {
         primary: {
           main: '#114514',
+          contrastText: '#AEDD81',
         },
         secondary: {
           main: '#464014',
