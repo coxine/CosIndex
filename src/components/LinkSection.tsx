@@ -5,9 +5,9 @@ import {
   Card,
   CardContent,
   CardActionArea,
-  Link,
 } from '@mui/material'
 import { LinkGroup } from '../types/link'
+import { Link } from 'react-router-dom'
 
 const LinkSection = ({
   section,
@@ -18,8 +18,8 @@ const LinkSection = ({
 }) => {
   const filteredItems = searchTerm
     ? section.items.filter((item) =>
-        item.name.toLowerCase().includes(searchTerm.toLowerCase())
-      )
+      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    )
     : section.items
 
   const isSearchResultEmpty = searchTerm && filteredItems.length === 0
@@ -39,14 +39,14 @@ const LinkSection = ({
             <Grid size={{ xs: 12, sm: 6, md: 2.4 }} key={index}>
               <Card variant="outlined" sx={{ height: '100%' }}>
                 <CardActionArea
-                  component={Link}
-                  href={item.link}
-                  target="_blank"
+                  component={item.link ? Link : 'div'}
+                  to={item.link || undefined}
+                  target={item.link ? '_blank' : undefined}
                   sx={{ height: '100%' }}
                 >
                   <CardContent>
                     <Typography
-                      variant="h6"
+                      variant="subtitle1"
                       component="div"
                       gutterBottom
                       sx={{

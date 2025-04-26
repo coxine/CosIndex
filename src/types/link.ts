@@ -6,6 +6,6 @@ export interface LinkItem {
 
 export interface LinkGroup {
   title: string
-  desc: string
+  desc?: string
   items: LinkItem[]
 }
