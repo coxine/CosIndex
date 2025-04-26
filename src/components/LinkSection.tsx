@@ -22,9 +22,7 @@ const LinkSection = ({
       )
     : section.items
 
-  if (searchTerm && filteredItems.length === 0) {
-    return null
-  }
+  const isSearchResultEmpty = searchTerm && filteredItems.length === 0
 
   return (
     <Box sx={{ mb: 2, px: 2 }}>
@@ -35,31 +33,33 @@ const LinkSection = ({
         </Typography>
       </Typography>
 
-      <Grid container spacing={3}>
-        {filteredItems.map((item, index) => (
-          <Grid size={{ xs: 12, sm: 6, md: 2.4 }} key={index}>
-            <Card variant="outlined" sx={{ height: '100%' }}>
-              <CardActionArea
-                component={Link}
-                href={item.link}
-                target="_blank"
-                sx={{ height: '100%' }}
-              >
-                <CardContent>
-                  <Typography variant="h6" component="div" gutterBottom>
-                    {item.name}
-                  </Typography>
-                  {item.desc && (
-                    <Typography variant="body2" color="text.secondary">
-                      {item.desc}
+      {!isSearchResultEmpty && (
+        <Grid container spacing={3}>
+          {filteredItems.map((item, index) => (
+            <Grid size={{ xs: 12, sm: 6, md: 2.4 }} key={index}>
+              <Card variant="outlined" sx={{ height: '100%' }}>
+                <CardActionArea
+                  component={Link}
+                  href={item.link}
+                  target="_blank"
+                  sx={{ height: '100%' }}
+                >
+                  <CardContent>
+                    <Typography variant="h6" component="div" gutterBottom>
+                      {item.name}
                     </Typography>
-                  )}
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
+                    {item.desc && (
+                      <Typography variant="body2" color="text.secondary">
+                        {item.desc}
+                      </Typography>
+                    )}
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      )}
     </Box>
   )
 }

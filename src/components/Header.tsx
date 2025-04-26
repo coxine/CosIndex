@@ -105,7 +105,8 @@ export default function Header({
           </Link>
         </Toolbar>
       </AppBar>
-      <Toolbar /> {/* This empty Toolbar creates space equal to the AppBar height */}
+      <Toolbar />{' '}
+      {/* This empty Toolbar creates space equal to the AppBar height */}
     </Box>
   )
 }
