@@ -18,8 +18,8 @@ const LinkSection = ({
 }) => {
   const filteredItems = searchTerm
     ? section.items.filter((item) =>
-      item.name.toLowerCase().includes(searchTerm.toLowerCase())
-    )
+        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+      )
     : section.items
 
   const isSearchResultEmpty = searchTerm && filteredItems.length === 0
