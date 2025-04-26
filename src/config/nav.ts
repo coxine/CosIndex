@@ -52,7 +52,7 @@ export const navData: LinkGroup[] = [
     desc: '呢喃相关',
     items: [
       {
-        name: '南软佛教玩乐指南',
+        name: '南软佛脚玩乐指南',
         link: 'https://costg.gitbook.io/njuse',
         desc: '南大软院部分课程笔记资料&南京周边吃喝玩乐攻略',
       },
