@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# 验证配置文件格式
+echo "\033[1;33m正在执行: Config Validation\033[0m"
+npm run validate-config
+if [ $? -ne 0 ]; then
+  echo "\033[1;31m配置文件验证失败，请检查配置文件格式。\033[0m"
+  exit 1
+else
+  echo "\033[1;32m配置文件验证通过。\033[0m"
+fi
+
 # Lint 检查
 echo "\033[1;33m正在执行: Lint\033[0m"
 npm run lint
