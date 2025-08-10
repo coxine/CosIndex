@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "typecheck": "tsc -b",
     "format": "prettier --write .",
-    "preview": "vite previ  ew",
+    "preview": "vite preview",
     "prepare": "husky"
   },
   "dependencies": {
@@ -21,7 +21,8 @@
     "react-dom": "^19.0.0",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.6.3",
-    "remark-gfm": "^4.0.1"
+    "remark-gfm": "^4.0.1",
+    "zod": "^4.0.17"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",

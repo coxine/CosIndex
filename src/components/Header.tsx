@@ -12,7 +12,7 @@ import { GitHub, Search, Close } from '@mui/icons-material'
 import { useState } from 'react'
 
 import ColorSchemeToggle from './ColorSchemeToggle'
-import { siteTitle } from '../config/site'
+import { siteTitle } from '../config/loader/site'
 import { Link } from 'react-router-dom'
 
 export default function Header({

@@ -26,7 +26,7 @@
 
 ### 🏠 自定义站点信息
 
-编辑 `src/config/site.ts` 文件：
+编辑 `src/config/data/site.json` 文件：
 
 - `siteTitle`：站点标题
 - `footerText`：页脚文字
@@ -35,16 +35,16 @@
 
 如果你部署了短链接服务（如：`https://short.example.com`），可开启短链功能。  
 在访问 `/xx` 时会自动跳转至 `https://short.example.com/xx`。  
-若不启用，请将 `site.ts` 中的 `isShortLinkEnabled` 设置为 `false`。
+若不启用，请将 `site.json` 中的 `isShortLinkEnabled` 设置为 `false`。
 
 - `isShortLinkEnabled`：是否启用短链接功能
 - `shortLinkBaseUrl`：短链接服务地址（如：`https://short.example.com`）
 
 ### 📖 自定义网站介绍
 
-编辑 `src/config/introduction.ts` 文件：
+编辑 `src/config/data/introduction.md` 文件：
 
-- `introduction` 字段支持 Markdown，可用于个人介绍、站点说明等。
+- 支持 Markdown 格式，可用于个人介绍、站点说明等。
 
 ### 🎨 自定义主题风格
 
@@ -55,7 +55,7 @@
 
 ### 🔗 自定义导航链接
 
-编辑 `src/config/nav.ts` 文件：
+编辑 `src/config/data/nav.json` 文件：
 
 - 每个链接组支持：
   - `title`：标题

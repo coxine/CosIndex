@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Box, Typography, useTheme } from '@mui/material'
-import { isShortLinkEnabled, shortLinkBaseUrl } from '../config/site'
+import { isShortLinkEnabled, shortLinkBaseUrl } from '../config/loader/site'
 
 function Redirect() {
   const location = useLocation()

@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material'
-import { footerText, siteTitle } from '../config/site'
+import { footerText, siteTitle } from '../config/loader/site'
 
 function Footer() {
   const currentYear = new Date().getFullYear()

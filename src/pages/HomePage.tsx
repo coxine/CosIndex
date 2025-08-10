@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { Container, Box, Divider } from '@mui/material'
-import { navData } from '../config/nav'
+import { navData } from '../config/loader/nav'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import LinkSection from '../components/LinkSection'
-import { introduction } from '../config/introduction'
+import { introduction } from '../config/loader/introduction'
 import MarkdownRenderer from '../components/MarkdownRenderer'
 
 function HomePage() {
