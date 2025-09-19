@@ -45,18 +45,39 @@ const LinkSection = ({
                   sx={{ height: '100%' }}
                 >
                   <CardContent>
-                    <Typography
-                      variant="subtitle1"
-                      component="div"
-                      gutterBottom
-                      sx={{
-                        whiteSpace: 'nowrap',
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                      }}
-                    >
-                      {item.name}
-                    </Typography>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                      <Typography
+                        variant="subtitle1"
+                        component="div"
+                        gutterBottom
+                        sx={{
+                          whiteSpace: 'nowrap',
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
+                          flex: 1,
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: 1,
+                        }}
+                      >
+                        <Box
+                          component="img"
+                          src={`https://toolb.cn/favicon/${item.link}`}
+                          alt={item.name}
+                          sx={{
+                            width: '1em',
+                            height: '1em',
+                            verticalAlign: 'middle',
+                            display: 'inline-block',
+                          }}
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement
+                            target.style.display = 'none'
+                          }}
+                        />
+                        {item.name}
+                      </Typography>
+                    </Box>
                     {item.desc && (
                       <Typography
                         variant="body2"
