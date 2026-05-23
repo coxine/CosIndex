@@ -5,11 +5,8 @@ import React, { useEffect } from 'react'
 function ColorSchemeToggle(props: IconButtonProps) {
   const { onClick, ...other } = props
   const { mode, setMode } = useColorScheme()
-  const [mounted, setMounted] = React.useState(false)
 
   useEffect(() => {
-    setMounted(true)
-
     const savedMode = localStorage.getItem('theme-mode')
     if (savedMode && (savedMode === 'light' || savedMode === 'dark')) {
       setMode(savedMode)
@@ -35,7 +32,6 @@ function ColorSchemeToggle(props: IconButtonProps) {
     <IconButton
       aria-label="toggle light/dark mode"
       size="small"
-      disabled={!mounted}
       onClick={handleToggleMode}
       {...other}
     >

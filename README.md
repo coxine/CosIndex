@@ -31,14 +31,14 @@
 - `siteTitle`：站点标题
 - `footerText`：页脚文字
 
-#### 🔁 启用短链接跳转（可选）
+#### 🔁 短链接跳转
 
-如果你部署了短链接服务（如：`https://short.example.com`），可开启短链功能。  
-在访问 `/xx` 时会自动跳转至 `https://short.example.com/xx`。  
-若不启用，请将 `site.json` 中的 `isShortLinkEnabled` 设置为 `false`。
+项目通过 `public/_redirects` 配置短链接跳转，部署至 Cloudflare Pages 后自动生效。  
+访问 `/xx` 时将 301 跳转至 `https://go.cos.tg/xx`。
 
-- `isShortLinkEnabled`：是否启用短链接功能
-- `shortLinkBaseUrl`：短链接服务地址（如：`https://short.example.com`）
+如需修改跳转目标，编辑 `public/_redirects` 文件即可。
+
+如果无需使用短链接功能，直接删除 `public/_redirects` 文件即可。
 
 ### 📖 自定义网站介绍
 
