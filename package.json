@@ -19,7 +19,7 @@
     "@mui/icons-material": "^7.3.11",
     "@mui/material": "^7.3.9",
     "react": "^19.1.1",
-    "react-dom": "^19.2.7",
+    "react-dom": "^19.3.0",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.18.3",
     "remark-gfm": "^4.0.1",
@@ -28,7 +28,7 @@
   "devDependencies": {
     "@eslint/js": "^9.39.5",
     "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
+    "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^5.1.4",
     "eslint": "^9.39.2",
     "eslint-plugin-react-hooks": "^7.1.1",
